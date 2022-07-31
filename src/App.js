@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import DrumPad from './components/DrumPad';
+import { pads } from './padsData';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div >
+      <header>
+        <h1>Piano Chords</h1>
       </header>
+      <div id="drum-machine">
+        <div  id='display'></div>
+
+
+        <div
+          id='board'
+          style = {{
+            display: 'flex',
+            justifyContent: 'center',
+            minHeight: 200,
+
+          }}
+        >
+          {pads.map((dict,idx)=>(<DrumPad title={dict.title} key={idx} letter={dict.letter} audioLink={dict.audio}/>))}
+
+        </div>
+
+      </div>
+
     </div>
   );
 }

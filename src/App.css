@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+#root {
+  font-family: 'Roboto';
 }
 
 .App-logo {
@@ -28,11 +28,25 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drum-pad{
+  background-color: #7d4cdb;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 7px;
+  color: #F8F8F8;
+  text-align: center;
+  justify-content: flex-end;
+  display:flex;
+  flex-direction: column;
+}
+.drum-pad:hover{
+  background-color: #9065de;
+}
+.drum-pad:active{
+  background-color: #4610ab;
+}
+header{
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
 }
