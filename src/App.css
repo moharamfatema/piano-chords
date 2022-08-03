@@ -1,52 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,400;1,800&display=swap');
+
 #root {
-  font-family: 'Roboto';
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'EB Garamond', serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  --brand: #7d4cdb;
+  --accent-1: #6FFFB0;
+  --accent-2: #FD6FFF;
+  --accent-3: #81FCED;
+  --accent-4: #FFCA58;
+  --neutral-2: #3D138D;
 }
 
-.App-link {
-  color: #61dafb;
+#board {
+  display: flex;
+  justify-content: center;
+  min-height: 25vh;
 }
 
-.drum-pad{
-  background-color: #7d4cdb;
+.drum-pad {
+  background-color:var(--brand);
   padding: 10px;
   margin: 2px;
   border-radius: 7px;
   color: #F8F8F8;
   text-align: center;
   justify-content: flex-end;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  min-width: 15px;
 }
-.drum-pad:hover{
-  background-color: #9065de;
+
+.drum-pad:hover {
+  background-color: #6d37d2;
 }
-.drum-pad:active{
-  background-color: #4610ab;
+
+.drum-pad:active {
+  background-color:var(--neutral-2);
 }
-header{
+
+header {
   text-align: center;
-  font-weight: bold;
-  font-size: xx-large;
+  font-weight: 800;
+  font-size: x-large;
+  color: var(--brand);
+}
+
+#drum-machine{
+  max-width: fit-content;
+}
+
+#display {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#display-value{
+  background-color: var(--accent-1);
+  padding: 10px;
+  margin: 2px;
+  border-radius: 7px;
+  text-align: center;
+  font-size: x-large;
+  color: var(--neutral-2);
+}
+div:focus{
+  outline:none;
 }

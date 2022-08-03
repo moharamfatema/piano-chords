@@ -1,53 +1,34 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import './../App.css'
+import { DisplayContext } from "../DisplayContext";
 
-export default function DrumPad({ letter, audioLink, title }) {
+export default function DrumPad({ letter, audioLink, title , trig}) {
 
     const audioRef = useRef(null);
-
+    const setDisp = useContext(DisplayContext);
     const [trigger, setTrigger] = useState(false);
     useEffect(() => {
-        if (trigger) {
+        if (trigger || trig) {
             playAudio()
             console.debug(`Triggered ${letter} pad`);
+        }else{
+            audioRef.current.currentTime = 0;
         }
-    }, [trigger, letter])
+    }, [trigger,trig])
 
     const playAudio = () => {
-        console.debug('in play audio');
-        // const audioPromise = audio.play()
-        // if (audioPromise !== undefined) {
-        //     audioPromise
-        //         .then(_ => {
-        //             // autoplay started
-        //             console.info('audio started');
-
-        //         })
-        //         .catch(err => {
-            //             // catch dom exception
-            //             console.error(err)
-            //         })
-            // }
-
-            audioRef.current.currentTime = 0;
-
-            audioRef.current.play();
-            setTrigger(false)
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+        setTrigger(false)
+        setDisp(title);
     }
 
-    const onKey = (e) => {
-        console.debug(`Key ${e.key} was pressed.`);
-
-        if (e.key === letter.toLowerCase())
-            setTrigger(true);
-    }
     return (
         <div
             onClick={()=>{setTrigger(true)}}
-            onKeyDown={onKey}
             className='drum-pad'
             id={`${title}`}
-            >
+        >
             {letter}
             <audio preload='auto' className="clip" id={`${letter}`} ref={audioRef} src={audioLink} />
         </div>
