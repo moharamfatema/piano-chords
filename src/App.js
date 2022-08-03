@@ -43,8 +43,10 @@ function App() {
       onKeyDown={onKey}
       tabIndex={0}
       ref={divFocus}
+      id='wrapper'
+
     >
-      <header>
+      <header >
         <h1>Piano Chords</h1>
       </header>
       <div id="drum-machine">
@@ -62,7 +64,10 @@ function App() {
         </div>
 
       </div>
-
+      <footer >
+        <p>Icons from </p>
+        <a href='https://icons8.com'> Icons 8</a>
+      </footer>
     </div>
   );
 }

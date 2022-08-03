@@ -12,7 +12,9 @@
   --accent-4: #FFCA58;
   --neutral-2: #3D138D;
 }
-
+body{
+  margin: 0;
+}
 #board {
   display: flex;
   justify-content: center;
@@ -44,7 +46,9 @@ header {
   text-align: center;
   font-weight: 800;
   font-size: x-large;
-  color: var(--brand);
+  color: ivory;
+  background-color: var(--brand);
+  width:100%;
 }
 
 #drum-machine{
@@ -69,4 +73,23 @@ header {
 }
 div:focus{
   outline:none;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 97vh;
+  justify-content: space-between;
+  min-width:100vw;
+  align-items:center;
+}
+footer{
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  color: var(--neutral-2);
+}
+footer a{
+  color:var(--brand);
+  text-decoration: unset;
 }
