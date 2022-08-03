@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/piano-chords/static/css/main.f2cf69de.css",
-    "main.js": "/piano-chords/static/js/main.c26df6c5.js",
+    "main.css": "/piano-chords/static/css/main.e35def06.css",
+    "main.js": "/piano-chords/static/js/main.f11e50a4.js",
     "static/js/787.7c1f682c.chunk.js": "/piano-chords/static/js/787.7c1f682c.chunk.js",
     "index.html": "/piano-chords/index.html",
-    "main.f2cf69de.css.map": "/piano-chords/static/css/main.f2cf69de.css.map",
-    "main.c26df6c5.js.map": "/piano-chords/static/js/main.c26df6c5.js.map",
+    "main.e35def06.css.map": "/piano-chords/static/css/main.e35def06.css.map",
+    "main.f11e50a4.js.map": "/piano-chords/static/js/main.f11e50a4.js.map",
     "787.7c1f682c.chunk.js.map": "/piano-chords/static/js/787.7c1f682c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2cf69de.css",
-    "static/js/main.c26df6c5.js"
+    "static/css/main.e35def06.css",
+    "static/js/main.f11e50a4.js"
   ]
 }
